@@ -1,0 +1,58 @@
+name: Pcc_limbo_system
+version: '3.6'
+main: limbo.pcc.pcc_limbo_system.Pcc_limbo_system
+api-version: 1.19
+commands:
+  pcc:
+    description: 插件主指令
+  gonggao:
+    description: 发布公告
+  shout:
+    description: 管理员喊话，支持颜色：green/blue/yellow/red/white/aqua
+  stopp:
+    description: 关闭服务器倒计时，到时关闭(可在配置中调节时间)
+  limbo:
+    description: 小黑屋
+  vote:
+    description: 投票
+  question:
+    description: 发布答题
+  answer:
+    description: 回答问题
+  chat:
+    description: chat
+  signin:
+    description: 签到
+  signin_week:
+    description: 领取连续签到奖励
+permissions:
+  pcc.command.gonggao:
+    description: 公告
+    default: op
+  pcc.command.shout:
+    description: 管理员喊话
+    default: op
+  pcc.command.stop:
+    description: 关闭服务器
+    default: op
+  pcc.command.config:
+    description: 使用指令更改配置等
+    default: op
+  pcc.command.limbo:
+    description: 小黑屋
+    default: op
+  pcc.command.limbo.cnacel:
+    description: 取消小黑屋
+    default: op
+  pcc.command.chat:
+    description: ChatGPT问答权限
+    default: true
+  pcc.signin:
+    description: 签到权限
+    default: true
+  pcc.signin_week:
+    description: 领取连续签到奖励权限
+    default: true
+libraries:
+  - com.squareup.okhttp3:okhttp:4.10.0
+  - com.squareup.okio:okio-jvm:3.0.0
