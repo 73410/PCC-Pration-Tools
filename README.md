@@ -38,7 +38,7 @@
 - /shout：喊话​\
 ![shout](docs/images/shout.jpg)
 - /signin：签到​\
-[signin](docs/images/signin.jpg)
+![signin](docs/images/signin.jpg)
 - /stopp：倒计时关服​\
 ![stop](docs/images/stopp.jpg)
 - 投票系统：待补充
