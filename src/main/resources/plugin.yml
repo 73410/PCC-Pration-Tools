@@ -1,7 +1,7 @@
 name: Pcc_limbo_system
-version: '3.6'
+version: '3.5.3'
 main: limbo.pcc.pcc_limbo_system.Pcc_limbo_system
-api-version: 1.19
+api-version: 1.19.3
 commands:
   pcc:
     description: 插件主指令
@@ -54,5 +54,4 @@ permissions:
     description: 领取连续签到奖励权限
     default: true
 libraries:
-  - com.squareup.okhttp3:okhttp:4.10.0
-  - com.squareup.okio:okio-jvm:3.0.0
+  - com.squareup.okhttp3:okhttp:4.12.0

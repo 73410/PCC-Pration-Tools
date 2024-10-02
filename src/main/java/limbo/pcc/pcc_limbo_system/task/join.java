@@ -27,7 +27,7 @@ public class join implements Listener {
             List<String> resourselist = config.getConfig().getStringList("voteresourse");
             List<String> list = config.getConfig().getStringList("vote");
             String title = config.getConfig().getString("votetitle");
-            Bukkit.getServer().broadcastMessage(ChatColor.GREEN+title+"（点击下面选项投票）");
+            Bukkit.getServer().broadcastMessage(ChatColor.GREEN+title+"（点击下面选项投票,基岩版/vote <选项>）");
             for (int i = 0; i < list.size(); i++) {
                 TextComponent message = new TextComponent(ChatColor.GREEN + list.get(i) + ".");
                 TextComponent exa = new TextComponent(resourselist.get(i));

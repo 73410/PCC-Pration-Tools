@@ -22,6 +22,8 @@ timerin:
   - §5提示:建议在qq群内联系管理
   - §1qq群:12345678
   - §4----------------------------
+#在无人的时候是否不显示定时公告
+hide_when_no_player: true
 # 重启倒计时所倒计时的秒数
 stop: 20
 # 是否开启投票功能
@@ -45,3 +47,4 @@ signin: false
 
 #ChatGPT的后端服务器ip
 ip: http://htyuty.top
+api_key:

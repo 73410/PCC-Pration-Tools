@@ -61,7 +61,7 @@ public class question implements CommandExecutor, TabExecutor {
         List<String> list = question.getStringList("things");
         configs.getConfig().set("answer", true);
         configs.saveConfig();
-        Bukkit.getServer().broadcastMessage(ChatColor.YELLOW + question.getString("question"));
+        Bukkit.getServer().broadcastMessage(ChatColor.YELLOW + question.getString("question")+"（java版可以点击选项，基岩版/answer <选项>)");
         for (int i = 0; i < list.size(); i++) {
             if (i % 2 == 0) {
                 TextComponent message = new TextComponent(ChatColor.GREEN + list.get(i) + ".");
