@@ -48,3 +48,28 @@
 [配置关于ChatGPT功能](https://github.com/73410/PCC-Pration-Tools-GPT-Sever)
 # 六、友情链接
 [minebbs上的发布](https://www.minebbs.com/resources/pration-tools.8036/)
+# 七、主要功能模块与类说明
+- 插件主类：`Pcc_limbo_system`，负责插件的初始化、指令注册、配置加载等。
+- 指令实现类：如 `main`（主指令）、`gong_gao`（公告）、`shout`（喊话）、`stop`（倒计时关服）、`limbo`（小黑屋）、`vote`（投票）、`question`/`answer`（答题）、`ChatCommandExecutor`（ChatGPT 聊天）、`sign_in`/`sign_in_week`（签到）。
+- 任务与事件监听：如 `join`（进服公告）、`timer`（定时公告）等。
+
+# 八、详细指令与用法示例
+- `/chat [内容] [模型]`：与 ChatGPT 聊天，模型可选 gpt-4o/gpt-4o-mini，`/chat clear` 清除会话。
+- `/gonggao [内容]`：发布公告。
+- `/shout [内容]`：全服喊话。
+- `/stopp`：倒计时关服。
+- `/vote [on|off|reset|result|pull]`：投票系统相关操作。
+- `/question [内容]`、`/answer [答案]`：答题系统。
+- `/signin`、`/signin_week`：签到与连续签到奖励。
+
+# 九、配置文件说明
+- `config.yml`：插件主配置，包含公告、投票、签到等功能的开关与参数。
+- 其他 yml 文件：如 `question.yml`（题库）、`sign.yml`（签到数据）、`vote_result.yml`（投票结果）等。
+
+# 十、依赖与兼容性
+- 依赖 Bukkit/Spigot/Paper 服务器。
+- 需 Java 8+ 环境。
+- ChatGPT 聊天功能需额外后端服务支持（详见上文链接）。
+
+# 十一、贡献与反馈
+- 欢迎通过 issues/discussions 反馈问题与建议。
