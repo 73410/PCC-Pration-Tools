@@ -19,7 +19,7 @@
 - /signin：签到
 - /signin_week：领取连续签到奖励
 # 三、权限节点
-- pcc.comman.gonggao：插件主指令
+- pcc.command.gonggao：插件主指令
 - pcc.command.gonggao：发布公告
 - pcc.command.shout：喊话
 - pcc.command.stop：倒计时关服
