@@ -41,7 +41,7 @@ permissions:
   pcc.command.limbo:
     description: 小黑屋
     default: op
-  pcc.command.limbo.cnacel:
+  pcc.command.limbo.cancel:
     description: 取消小黑屋
     default: op
   pcc.command.chat:

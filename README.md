@@ -25,7 +25,7 @@
 - pcc.command.stop：关闭服务器
 - pcc.command.config：使用指令更改配置等
 - pcc.command.limbo：小黑屋
-- pcc.command.limbo.cnacel：取消小黑屋
+- pcc.command.limbo.cancel：取消小黑屋
 - pcc.command.chat：ChatGPT问答权限
 - pcc.signin：签到权限
 - pcc.signin_week：领取连续签到奖励权限
