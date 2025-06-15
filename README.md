@@ -12,6 +12,7 @@
 - /gonggao：发布公告
 - /shout：喊话
 - /stopp：倒计时关服
+- /limbo：小黑屋
 - /vote: 服务器投票
 - /question: 发布问题
 - /answer: 回答问题
@@ -19,12 +20,14 @@
 - /signin：签到
 - /signin_week：领取连续签到奖励
 # 三、权限节点
-- pcc.command.gonggao：插件主指令
 - pcc.command.gonggao：发布公告
-- pcc.command.shout：喊话
-- pcc.command.stop：倒计时关服
-- pcc.command.chat：ChatGPT聊天权限
-- pcc.sign：签到权限
+- pcc.command.shout：管理员喊话
+- pcc.command.stop：关闭服务器
+- pcc.command.config：使用指令更改配置等
+- pcc.command.limbo：小黑屋
+- pcc.command.limbo.cnacel：取消小黑屋
+- pcc.command.chat：ChatGPT问答权限
+- pcc.signin：签到权限
 - pcc.signin_week：领取连续签到奖励权限
  # 四、效果预览
 - /chat：ChatGPT聊天​\
@@ -54,13 +57,15 @@
 - 任务与事件监听：如 `join`（进服公告）、`timer`（定时公告）等。
 
 # 八、详细指令与用法示例
-- `/chat [内容] [模型]`：与 ChatGPT 聊天，模型可选 gpt-4o/gpt-4o-mini，`/chat clear` 清除会话。
-- `/gonggao [内容]`：发布公告。
-- `/shout [内容]`：全服喊话。
-- `/stopp`：倒计时关服。
-- `/vote [on|off|reset|result|pull]`：投票系统相关操作。
-- `/question [内容]`、`/answer [答案]`：答题系统。
-- `/signin`、`/signin_week`：签到与连续签到奖励。
+下面列出常用指令及其用法，`[]` 为可选参数：
+- `/chat <内容> [模型]`：与 ChatGPT 聊天，模型可选 `gpt-4o`/`gpt-4o-mini`，使用 `/chat clear` 可清除会话。例如：`/chat 你好 gpt-4o`。
+- `/gonggao <内容>`：向全服发布公告。如：`/gonggao 服务器即将维护`。
+- `/shout <颜色> <内容>`：带颜色的喊话，颜色可选 `yellow/green/blue/red/white/aqua`，示例：`/shout red 今天活动开始！`。
+- `/stopp`：根据配置文件中的时间开始倒计时关服，常用于重启服务器。
+- `/limbo <玩家> <1|2|cancel>`：将玩家关进或放出小黑屋，其中 `1`、`2` 代表不同房间，`cancel` 为解除。
+- `/vote <on|off|reset|result|pull>`：开启或关闭投票，重置数据、查看结果或向玩家推送投票。例如：`/pcc vote pull` 发布投票选项。
+- `/question` 与 `/answer <选项>`：发布答题并作答，题目及奖励在 `question.yml` 中配置。
+- `/signin`、`/signin_week`：每日签到与连续七天签到奖励，满足条件后使用 `/signin_week` 领取。
 
 # 九、配置文件说明
 - `config.yml`：插件主配置，包含公告、投票、签到等功能的开关与参数。
